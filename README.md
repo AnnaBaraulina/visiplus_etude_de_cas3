@@ -68,7 +68,7 @@ socket.on("article:delete", console.log);
 ```
 
 ### UML Diagram
-![UML Diagram](docs/database-uml.pumpl)
+![UML Diagram](docs/database-uml.png)
 
 
 ### Deployment (PM2)
