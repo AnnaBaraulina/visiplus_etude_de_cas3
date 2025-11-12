@@ -24,11 +24,21 @@ describe("tester API users", () => {
     password: "azertyuiop",
   };
 
+  let getUserSpy;
+
   beforeEach(() => {
     token = jwt.sign({ userId: USER_ID }, config.secretJwtToken);
-    // mongoose.Query.prototype.find = jest.fn().mockResolvedValue(MOCK_DATA);
+    
     mockingoose(User).toReturn(MOCK_DATA, "find");
     mockingoose(User).toReturn(MOCK_DATA_CREATED, "save");
+    getUserSpy = jest
+      .spyOn(usersService, "get")
+      .mockResolvedValue({
+        _id: USER_ID,
+        name: "Test",
+        email: "test@example.com",
+        role: "admin",
+      });
   });
 
   test("[Users] Get All", async () => {
