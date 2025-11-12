@@ -1,7 +1,7 @@
 ## Node.js Approfondissement – Articles API
 
 ### Overview
-Continuation of the Oktogone training project to manage user-created articles. This iteration adds publication status, CRUD endpoints secured by JWT, role-based permissions, real-time Socket.IO events, a public listing endpoint, automated tests, deployment settings, and the database UML requested in the brief.
+Continuation of the training project from "Développement Back-end avec Node js et Express: approfondissement" chapter to manage user-created articles. This iteration adds publication status, CRUD endpoints secured by JWT, role-based permissions, real-time Socket.IO events, a public listing endpoint, automated tests, deployment settings, and the database UML requested in the brief.
 
 ### Features
 - Article schema enhanced with `status` enum (`draft` | `published`) and timestamps.
